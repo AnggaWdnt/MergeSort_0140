@@ -33,3 +33,16 @@ void input()
         cin >> arr[i];
     }
 }
+
+// create function mergesort
+void mergeSort(int low, int high) {
+    if (low >= high) // step 1
+        return;
+
+    int mid = (low + high) / 2; // step 2
+
+    // step 3
+    // fungsi memanggil diri sendiri
+    mergeSort(low, mid);
+    mergeSort(mid + 1, high);
+}
